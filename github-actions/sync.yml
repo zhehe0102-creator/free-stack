@@ -1,0 +1,19 @@
+# GitHub Actions — 定时同步模板（示例：每天拉一次免费模型名单）
+# 放进仓库 .github/workflows/sync.yml
+# 注意：Actions 不能当服务器，不能跑常驻服务、GPU 任务
+name: sync-free-models
+
+on:
+  schedule:
+    - cron: "0 4 * * *"  # 每天 04:00 UTC
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch OpenRouter free models
+        run: |
+          curl -fsS https://openrouter.ai/api/v1/models -o models.json
+          python3 -c "import json; d=json.load(open('models.json')); print([m['id'] for m in d['data'] if m['id'].endswith(':free')])"

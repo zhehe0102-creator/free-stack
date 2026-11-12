@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>免费栈 — 静态预览</title>
+</head>
+<body>
+<h1>免费栈预览</h1>
+<p>这是 Sakupa 静态预览模板。Sakupa 免费档只是 30 天临时预览，不是长期托管。</p>
+<p>API 地址：<code id="api">&lt;WORKER_URL&gt;/health</code></p>
+<button onclick="fetch(document.getElementById('api').textContent).then(r=>r.json()).then(d=>alert(JSON.stringify(d))).catch(e=>alert('API 未接通：'+e))">测一下 API</button>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"mcpServers":{"simular-box":{"note":"Simular Box：云 Linux 桌面，给 AI 代操作浏览器/命令用。不带 Agent，需自带 Claude/Codex/Cursor 等。Box 本身 $0，模型调用耗每日积分；会休眠，连续睡 14 天删机，无 GPU。首次用 OAuth 登录，无需贴 key。规格（网传 4核/8GB/每天 1,000 credits）官网未写，未核实。","url":"https://mcp.box.simular.ai/mcp"}}}

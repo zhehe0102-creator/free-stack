@@ -1,0 +1,9 @@
+name = "free-stack-api"
+main = "api.js"
+compatibility_date = "2026-11-12"
+
+# 免费档：100,000 请求/天，CPU 10ms/请求，内存 128MB
+# Secret 设置（不要写进文件）：
+#   npx wrangler secret put OPENROUTER_API_KEY
+#   npx wrangler secret put SUPABASE_URL
+#   npx wrangler secret put SUPABASE_ANON_KEY
